@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="Assets\PlayingField.cs" />
     <Compile Include="Assets\Scripts\AgentController.cs" />
-    <Compile Include="Assets\Scripts\AgentControllerRival.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Code/Unity/AwesomeProject2D/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

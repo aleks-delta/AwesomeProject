@@ -261,40 +261,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &788850200 stripped
+--- !u!1 &734096019 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1824596591392724, guid: 8bdec96927c967041a8de3e36f70eb8e,
+  m_CorrespondingSourceObject: {fileID: 1959712802297108, guid: 3930ba63e239b0d4e9099823065f19b9,
     type: 2}
-  m_PrefabInternal: {fileID: 2144835889}
---- !u!1 &792551866
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 792551868}
-  - component: {fileID: 792551867}
-  m_Layer: 0
-  m_Name: boing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &792551867
+  m_PrefabInternal: {fileID: 2053421881}
+--- !u!82 &734096020
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 792551866}
+  m_GameObject: {fileID: 734096019}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eadeb6d73c6ade84289746a22a1a04b9, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1.42
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -377,19 +361,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &792551868
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 792551866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &788850200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1824596591392724, guid: 8bdec96927c967041a8de3e36f70eb8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2144835889}
 --- !u!1001 &2053421881
 Prefab:
   m_ObjectHideFlags: 0
@@ -397,6 +373,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114614519232193614, guid: 3930ba63e239b0d4e9099823065f19b9,
+        type: 2}
+      propertyPath: colors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4470459093467892, guid: 3930ba63e239b0d4e9099823065f19b9, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.2923697
@@ -427,7 +408,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4470459093467892, guid: 3930ba63e239b0d4e9099823065f19b9, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614519232193614, guid: 3930ba63e239b0d4e9099823065f19b9,
+        type: 2}
+      propertyPath: colors.Array.data[0].a
+      value: 0.003921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614519232193614, guid: 3930ba63e239b0d4e9099823065f19b9,
+        type: 2}
+      propertyPath: colors.Array.data[0].g
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3930ba63e239b0d4e9099823065f19b9, type: 2}
