@@ -6,6 +6,8 @@ public class AgentController : MonoBehaviour {
     public float afterSpeedX; 
     public float activateVelocityAfter = 0.0f;
     public float killConnectionsAfter = 0.0f;
+    public float thickness1 = 1.0f;
+    public float thickness2 = 1.0f;
     private Connector theConnector = null;
     
     private PlayingField playingField;
@@ -42,7 +44,7 @@ public class AgentController : MonoBehaviour {
         {
             Debug.Log("Making connections yo!");
             this.connectionTime = DateTime.Now;
-            theConnector = playingField.AddConnection(gameObject, collision.gameObject, 1.0f, 0.5f);
+            theConnector = playingField.AddConnection(gameObject, collision.gameObject, thickness1, thickness2);
         }
     }
 }

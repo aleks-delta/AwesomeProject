@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Connector
@@ -18,6 +19,11 @@ public class Connector
     private GameObject me;
     private GameObject agent1;
     private GameObject agent2;
+
+    internal void SetActive(bool v)
+    {
+        me.SetActive(v);
+    }
 }
 
 public class PlayingField : MonoBehaviour {
@@ -68,7 +74,7 @@ public class PlayingField : MonoBehaviour {
         var lineRenderer = theConnectorGO.GetComponent<LineRenderer>();
         lineRenderer.material = Resources.Load("LineMaterial") as Material;
 
-        lineRenderer.widthMultiplier = 0.5f;
+        //lineRenderer.widthMultiplier = 0.5f;
 
         Color col = colors[connections.Count];
         col.a = 1.0f;
@@ -91,7 +97,7 @@ public class PlayingField : MonoBehaviour {
         audioContainer = this.GetComponent<AudioSource>();
         audioContainer.PlayOneShot(splitClip);
 
-        //connection.SetActive(false);
+        connection.SetActive(false);
         connections.Remove(connection);
     }
 }
