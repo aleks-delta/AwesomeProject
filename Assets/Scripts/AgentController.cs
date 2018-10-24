@@ -25,7 +25,7 @@ public class AgentController : MonoBehaviour {
 	void Update () {
         if (Time.realtimeSinceStartup < activateVelocityAfter)
             return;
-
+        Debug.LogFormat("speedX = {0} (agent {1})", speedX, this.name);
         transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, 0);
         if (killConnectionsAfter > 0 && theConnector != null)
         {

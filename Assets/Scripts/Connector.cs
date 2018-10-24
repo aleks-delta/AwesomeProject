@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Connector : MonoBehaviour
+public class Connector
 {
     public Connector(GameObject a1, GameObject a2)
     {
@@ -31,11 +31,15 @@ public class Connector : MonoBehaviour
         lineRenderer.endColor = col;
         const float MAX_HOTNESS = 10.0f;
         //thickness proportional to the OTHER person's hotness
-        float thickness1 = agent2.GetComponent<AgentController>().hotness / MAX_HOTNESS; 
-        float thickness2 = agent1.GetComponent<AgentController>().hotness / MAX_HOTNESS;
+        float hotness1 = agent1.GetComponent<AgentController>().hotness;
+        float hotness2 = agent2.GetComponent<AgentController>().hotness;
+        float thickness1 = hotness2 / MAX_HOTNESS; 
+        float thickness2 = hotness1 / MAX_HOTNESS;
         lineRenderer.startWidth = thickness1;
         lineRenderer.endWidth = thickness2;
-
+        var velocityAfter = (hotness1 - hotness2);
+        agent1.GetComponent<AgentController>().speedX = velocityAfter;
+        agent2.GetComponent<AgentController>().speedX = velocityAfter;
         theConnectorGO.transform.position = (agent1.transform.position + agent2.transform.position) / 2.0f;
         theConnectorGO.transform.localScale = -(agent1.transform.position - agent2.transform.position) / 8.0f;
         return theConnectorGO;
