@@ -3,13 +3,10 @@ using UnityEngine;
 
 public class AgentController : MonoBehaviour {
     public float speedX, speedY;
-    //public float afterSpeedX; 
     public float activateVelocityAfter = 0.0f;
     public float killConnectionsAfter = 0.0f;
     public float hotness = 0.0f;
     public bool activateAvoidanceBehavior; //if true, run away from agents less attractive than you
-    //public float thickness1 = 1.0f;
-    //public float thickness2 = 1.0f;
     private Connector theConnector = null;
     
     private PlayingField playingField;
@@ -40,8 +37,6 @@ public class AgentController : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("colliding!");
-        this.speedX = 0;
-        this.speedY = 0;
         if (theConnector == null)
         {
             Debug.Log("Making connections yo!");
